@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>com.elgato.counter</title>
+	<title>com.alaneje.newcounter</title>
     <meta charset="utf-8" />
 </head>
 
@@ -18,7 +18,7 @@
         
     	var counterAction = {
 			
-			type : "com.elgato.counter.action",
+			type : "com.alaneje.newcounter.action",
 			
 			onKeyDown : function(context, settings, coordinates, userDesiredState) {
                 
@@ -71,7 +71,7 @@
 				};
 			
 				websocket.send(JSON.stringify(json));
-			 },
+			 },//Function for setting the title on the stream deck. Takes the key press counter and updates it. 
 			 
 			 SetSettings : function(context, settings) {
 				var json = {
@@ -82,7 +82,7 @@
 			
 				websocket.send(JSON.stringify(json));
 			 }
-		};
+		};//Saves the settings of the counter. 
     	
         function connectElgatoStreamDeckSocket(inPort, inPluginUUID, inRegisterEvent, inInfo)
          {
